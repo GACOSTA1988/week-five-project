@@ -14,14 +14,64 @@
 6. Determines how many years a user has live passed their life expectancy.
 
 ## TDD SPECS
-1. Test should correctly convert 1 earth year to (X) mercury year.
-2. Test should correctly convert 1 earth year to (X) Venus year.
-3. Test should correctly convert 1 earth year to (X) Mars year.
-4. Test should correctly convert 1 earth year to (X) Jupiter year.
-5. Test should correctly calculate a persons life expectancy based on activity level.
-6. Test should correctly calculate remaining years left to live on each planet based on life expectancy.
-7. Test should correctly calculate how many years a person has lived past life expactancy on each planet. 
+1. Test should correctly convert 5 earth years to (20.75) mercury year.
 
+* FAIL
+* EX INPUT: 5
+* EX OUTPUT: 30
+
+* PASS
+* EX INPUT: 5
+* EX OUTPUT: 20.75
+
+2. Test should correctly convert 5 earth years to (8.13) Venus year.
+* FAIL
+* EX INPUT: 5
+* EX OUTPUT: 6
+
+* PASS
+* EX INPUT: 5
+* EX OUTPUT: 8.13
+3. Test should correctly convert 5 earth years to (2.66) Mars year.
+* FAIL
+* EX INPUT: 5
+* EX OUTPUT: 6
+
+* PASS
+* EX INPUT: 5 
+* EX OUTPUT: 2.66
+4. Test should correctly convert 5 earth years to (.42) Jupiter year.
+* FAIL
+* EX INPUT: 5
+* EX OUTPUT: 2
+
+* PASS
+* EX INPUT: 5
+* EX OUTPUT: .42
+5. Test should correctly calculate a persons life expectancy based on activity level.
+* FAIL
+* EX INPUT: 
+* EX OUTPUT: 
+
+* PASS
+* EX INPUT: 
+* EX OUTPUT:
+6. Test should correctly calculate remaining years left to live on each planet based on life expectancy.
+* FAIL
+* EX INPUT: 
+* EX OUTPUT:
+
+* PASS
+* EX INPUT: 
+* EX OUTPUT:
+7. Test should correctly calculate how many years a person has lived past life expactancy on each planet. 
+* FAIL
+* EX INPUT: 
+* EX OUTPUT:
+
+* PASS
+* EX INPUT: 
+* EX OUTPUT:
 
 
 ## Setup/Installation Requirements
