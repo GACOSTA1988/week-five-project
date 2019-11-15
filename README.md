@@ -72,6 +72,14 @@
 * PASS
 * EX INPUT: Very Active 
 * EX OUTPUT: 80
+8. should correctly calculate life left in regards to   current age and lifeExp 
+* FAIL
+* EX INPUT: This.age 20, LifeExp 50
+* EX OUTPUT: 40
+
+* PASS
+* EX INPUT: This.age 20, LifeExp 80
+* EX OUTPUT: 60
 
 
 ## Setup/Installation Requirements
