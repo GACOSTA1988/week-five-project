@@ -5,7 +5,8 @@ constructor(age) {
   }
 
 calcMercYears(age) {
-    return (this.age * 365) / (365 * 0.24);
+    let mercYears = (this.age * 365) / (365 * 0.24);
+    return mercYears.toFixed(2);
 }
 
 
