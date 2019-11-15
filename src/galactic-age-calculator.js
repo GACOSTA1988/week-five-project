@@ -35,13 +35,13 @@ export class Person {
     }
   }
 
-//   calcLifeExp(activitylevel) {
-//     if (activitylevel === "Not Active"){
-//       return this.lifeExp += 5;
-//     } 
-//     if (activitylevel === "Very Active") {
-//       return this.lifeExp += 15;
-//     }
-//   }
+  calcLifeExp(activitylevel) {
+    if (activitylevel === "Not Active"){
+      return this.lifeExp += 50;
+    } 
+    if (activitylevel === "Very Active") {
+      return this.lifeExp += 80;
+    }
+  }
 
 }

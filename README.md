@@ -64,7 +64,7 @@
 * PASS
 * EX INPUT: Very Active
 * EX OUTPUT: Very Active
-7. Test should correctly calculate a persons life expactancy. 
+7. Test should correctly set a persons life expactancy. 
 * FAIL
 * EX INPUT: Very Active
 * EX OUTPUT: 50
