@@ -14,7 +14,7 @@
 6. Determines how many years a user has live passed their life expectancy.
 
 ## TDD SPECS
-1. Test should correctly convert 5 earth years to (20.75) mercury year.
+1. Test should correctly convert 5 earth years to (20.83) mercury year.
 
 * FAIL
 * EX INPUT: 5
@@ -22,7 +22,7 @@
 
 * PASS
 * EX INPUT: 5
-* EX OUTPUT: 20.75
+* EX OUTPUT: 20.83
 
 2. Test should correctly convert 5 earth years to (8.13) Venus year.
 * FAIL
