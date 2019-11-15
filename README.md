@@ -13,6 +13,13 @@
 5. Determines how many years a user has left to live on each planet according to their lfe expectancy.
 6. Determines how many years a user has live passed their life expectancy.
 
+## TDD SPECS
+1.
+2.
+3.
+4.
+5.
+
 
 
 ## Setup/Installation Requirements
