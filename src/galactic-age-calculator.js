@@ -14,4 +14,9 @@ calcVenYears(age) {
     return venYears.toFixed(2);   
 }
 
+calcMarsYears(age) {
+    let marsYears = (this.age * 365) / (365 * 1.88);
+    return marsYears.toFixed(2);   
+}
+
 }
