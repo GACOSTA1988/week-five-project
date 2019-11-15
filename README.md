@@ -56,14 +56,14 @@
 * PASS
 * EX INPUT: 
 * EX OUTPUT:
-6. Test should correctly calculate remaining years left to live on each planet based on life expectancy.
+6. Test should correctly calculate a persons life expectancy based on activity level(Not Active or Very Active).
 * FAIL
-* EX INPUT: 
-* EX OUTPUT:
+* EX INPUT: Not Active
+* EX OUTPUT: 20
 
 * PASS
-* EX INPUT: 
-* EX OUTPUT:
+* EX INPUT: Very Active
+* EX OUTPUT: 20
 7. Test should correctly calculate how many years a person has lived past life expactancy on each planet. 
 * FAIL
 * EX INPUT: 
