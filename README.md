@@ -14,11 +14,13 @@
 6. Determines how many years a user has live passed their life expectancy.
 
 ## TDD SPECS
-1.
-2.
-3.
-4.
-5.
+1. Test should correctly convert 1 earth year to (X) mercury year.
+2. Test should correctly convert 1 earth year to (X) Venus year.
+3. Test should correctly convert 1 earth year to (X) Mars year.
+4. Test should correctly convert 1 earth year to (X) Jupiter year.
+5. Test should correctly calculate a persons life expectancy based on activity level.
+6. Test should correctly calculate remaining years left to live on each planet based on life expectancy.
+7. Test should correctly calculate how many years a person has lived past life expactancy on each planet. 
 
 
 
