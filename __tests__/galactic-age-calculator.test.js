@@ -14,7 +14,7 @@ test('should correctly convert 5 earth years to (20.83) mercury years', () => {
     let testMarsPerson = new Person(5);
     expect(testMarsPerson.calcMarsYears()).toEqual("2.66");
   });
-  test.only('should correctly convert 5 earth years to (2.66) Jupiter years', () => {
+  test.only('should correctly convert 5 earth years to (0.42) Jupiter years', () => {
     let testJupPerson = new Person(5);
-    expect(testJupPerson.calcJupYears()).toEqual("2");
+    expect(testJupPerson.calcJupYears()).toEqual("0.42");
   });
