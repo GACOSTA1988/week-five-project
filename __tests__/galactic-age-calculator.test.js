@@ -12,5 +12,5 @@ test('should correctly convert 5 earth years to (20.83) mercury years', () => {
 
   test.only('should correctly convert 5 earth years to (2.66) venus years', () => {
     let testMarsPerson = new Person(5);
-    expect(testMarsPerson.calcMarsYears()).toEqual("6");
+    expect(testMarsPerson.calcMarsYears()).toEqual("2.66");
   });
