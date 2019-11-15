@@ -18,8 +18,13 @@ test('should correctly convert 5 earth years to (0.42) Jupiter years', () => {
   let testJupPerson = new Person(5);
   expect(testJupPerson.calcJupYears()).toEqual("0.42");
 });
-test.only('should correctly set the activity level for person const', () => {
+test('should correctly set the activity level for person object', () => {
   let testSetActLev = new Person();
   testSetActLev.setActivityLevel("Very Active")
   expect(testSetActLev.activityLevel).toEqual("Very Active");
+});
+test('should correctly set lifeExp in regards to activity level ', () => {
+  let testSetActLev = new Person();
+  testSetActLev.setActivityLevel("Very Active")
+  expect(testSetActLev.calcLifeExp).toEqual(40);
 });

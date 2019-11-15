@@ -56,22 +56,22 @@
 * PASS
 * EX INPUT: 
 * EX OUTPUT:
-6. Test should correctly calculate a persons life expectancy based on activity level(Not Active or Very Active).
+6. Test should correctly set the activity level for person object.
 * FAIL
 * EX INPUT: Not Active
-* EX OUTPUT: 20
+* EX OUTPUT: Very Active
 
 * PASS
 * EX INPUT: Very Active
-* EX OUTPUT: 20
-7. Test should correctly calculate how many years a person has lived past life expactancy on each planet. 
+* EX OUTPUT: Very Active
+7. Test should correctly calculate a persons life expactancy. 
 * FAIL
-* EX INPUT: 
-* EX OUTPUT:
+* EX INPUT: Very Active
+* EX OUTPUT: 50
 
 * PASS
-* EX INPUT: 
-* EX OUTPUT:
+* EX INPUT: Very Active 
+* EX OUTPUT: 80
 
 
 ## Setup/Installation Requirements
