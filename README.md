@@ -31,7 +31,7 @@
 
 * PASS
 * EX INPUT: 5
-* EX OUTPUT: 8.13
+* EX OUTPUT: 8.06
 3. Test should correctly convert 5 earth years to (2.66) Mars year.
 * FAIL
 * EX INPUT: 5
