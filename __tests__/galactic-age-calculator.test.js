@@ -20,6 +20,6 @@ test('should correctly convert 5 earth years to (0.42) Jupiter years', () => {
 });
 test.only('should correctly set the activity level for person const', () => {
   let testSetActLev = new Person();
-  testSetActLev.setActivityLevel("Not Active")
+  testSetActLev.setActivityLevel("Very Active")
   expect(testSetActLev.activityLevel).toEqual("Very Active");
 });
