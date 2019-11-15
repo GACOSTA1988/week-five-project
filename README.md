@@ -48,14 +48,7 @@
 * PASS
 * EX INPUT: 5
 * EX OUTPUT: .42
-5. Test should correctly calculate a persons life expectancy based on activity level.
-* FAIL
-* EX INPUT: 
-* EX OUTPUT: 
 
-* PASS
-* EX INPUT: 
-* EX OUTPUT:
 6. Test should correctly set the activity level for person object.
 * FAIL
 * EX INPUT: Not Active
@@ -64,6 +57,7 @@
 * PASS
 * EX INPUT: Very Active
 * EX OUTPUT: Very Active
+
 7. Test should correctly set a persons life expactancy. 
 * FAIL
 * EX INPUT: Very Active
@@ -72,6 +66,7 @@
 * PASS
 * EX INPUT: Very Active 
 * EX OUTPUT: 80
+
 8. should correctly calculate life left in regards to   current age and lifeExp 
 * FAIL
 * EX INPUT: This.age 20, LifeExp 50
