@@ -18,7 +18,7 @@ module.exports = {
     new UglifyJsPlugin({ sourceMap: true }),
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      title: 'siteShell',
+      title: 'project-name',
       template: './src/index.html',
       inject: 'body'
     })

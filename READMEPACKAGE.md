@@ -36,3 +36,47 @@
     "popper.js": "^1.15.0"
   }
 }
+
+
+________________________________________________________________________
+
+create .eslintrc file in root directory and copy contents below into file:
+
+{
+    "parserOptions": {
+        "ecmaVersion": 2017,
+        "sourceType": "module"
+    },
+    "extends": "eslint:recommended",
+    "env": {
+      "es6": true,
+      "browser": true,
+      "jquery": true
+    },
+    "rules": {
+      "semi": 1,
+      "indent": ["warn", 2],
+      "no-console": "warn",
+      "no-debugger": "warn"
+  }
+}
+
+________________________________________________________________________
+
+create .babelrc file in root directory and copy contents below into file:
+
+{
+  "env": {
+    "test": {
+      "plugins": ["@babel/plugin-transform-modules-commonjs"]
+    }
+  }
+}
+
+
+
+gitignore
+
+node_modules/
+.DS_Store
+dist/
