@@ -31,5 +31,5 @@ test('should correctly set lifeExp in regards to activity level ', () => {
 test.only('should correctly calculate life left in regards to current age and lifeExp ', () => {
   let testSetActLev = new Person("20");
   testSetActLev.calcLifeExp("Very Active")
-  expect(testSetActLev.calcLifeLeft()).toEqual(40);
+  expect(testSetActLev.calcLifeLeft()).toEqual(60);
 });

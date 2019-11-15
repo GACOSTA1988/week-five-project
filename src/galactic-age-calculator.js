@@ -46,6 +46,6 @@ export class Person {
 
   calcLifeLeft(){
     const lifeLeft = parseFloat(this.lifeExp) - parseFloat(this.age); 
-    return lifeLeft.toFixed(2)
+    return parseFloat(lifeLeft.toFixed(2))
   }
 }
