@@ -5,7 +5,7 @@ export class Person {
     this.activityLevel = activityLevel,
     this.lifeExp = 0
 
-    this.calcLifeLeftPerPlanet = this.calcLifeLeftPerPlanet.bind(this)
+    // this.calcLifeLeftPerPlanet = this.calcLifeLeftPerPlanet.bind(this)
   }
 
   calcMercYears(age) {
@@ -50,8 +50,9 @@ export class Person {
     const lifeLeft = parseFloat(this.lifeExp) - parseFloat(this.age); 
     return parseFloat(lifeLeft.toFixed(2));
   }
-  calcLifeLeftPerPlanet = () => {
-      const lifeleftonPlanetBlank = (this.lifeExp * 365) / (365 * 0.24)) - (this.calcMercYears(5));
-      return lifeleftonPlanetBlank;
-  }
+//   calcLifeLeftPerPlanet () {
+//       const lifeleftonPlanetBlank = (this.lifeExp * 365) / (365 * 0.24) - (parseFloat(this.calcMercYears()));  
+//       return lifeleftonPlanetBlank;
+//   }
+
 }

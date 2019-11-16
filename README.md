@@ -76,6 +76,14 @@
 * EX INPUT: This.age 20, LifeExp 80
 * EX OUTPUT: 60
 
+9. should correctly calculate life left in regards to current age and lifeExp on Mercury
+* FAIL
+* EX INPUT:  
+* EX OUTPUT: 
+
+* PASS
+* EX INPUT: 
+* EX OUTPUT: 
 
 ## Setup/Installation Requirements
 
