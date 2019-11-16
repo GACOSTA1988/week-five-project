@@ -28,8 +28,14 @@ test('should correctly set lifeExp in regards to activity level ', () => {
   testSetActLev.calcLifeExp("Very Active")
   expect(testSetActLev.lifeExp).toEqual(80);
 });
-test.only('should correctly calculate life left in regards to current age and lifeExp ', () => {
+test('should correctly calculate life left in regards to current age and lifeExp ', () => {
   let testSetActLev = new Person("20");
   testSetActLev.calcLifeExp("Very Active")
   expect(testSetActLev.calcLifeLeft()).toEqual(60);
+});
+test('should correctly calculate life left in regards to current age and lifeExp on Mercury ', () => {
+  let testSetActLev = new Person();
+  testSetActLev.calcMercYears(5)
+  testSetActLev.calcLifeExp("Very Active")
+  expect(testSetActLev.calcLifeLeftPerPlanet()).toEqual(60);
 });

@@ -46,6 +46,10 @@ export class Person {
 
   calcLifeLeft(){
     const lifeLeft = parseFloat(this.lifeExp) - parseFloat(this.age); 
-    return parseFloat(lifeLeft.toFixed(2))
+    return parseFloat(lifeLeft.toFixed(2));
+  }
+  calcLifeLeftPerPlanet () {
+      const lifeleftonPlanetBlank = (this.lifeExp * 365) / (365 * 0.24)) - (mercYears(age));
+      return lifeleftonPlanetBlank;
   }
 }
