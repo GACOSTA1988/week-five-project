@@ -1,58 +1,72 @@
 export class Person {
-
-  constructor(age, activityLevel, lifeExp) {
+  constructor(age = 0, activityLevel = "", lifeExp = 0) {
     this.age = age, 
     this.activityLevel = activityLevel,
-    this.lifeExp = 0
-
-    // this.calcLifeLeftPerPlanet = this.calcLifeLeftPerPlanet.bind(this)
+    this.lifeExp = lifeExp;
   }
 
-  calcMercYears(age) {
-    const mercYears = (this.age * 365) / (365 * 0.24);
+  calcMercYears(years) {
+    const mercYears = (years * 365) / (365 * 0.24);
     return mercYears.toFixed(2);   
   }
 
-  calcVenYears(age) {
+  calcVenYears() {
     const venYears = (this.age * 365) / (365 * 0.62);
     return venYears.toFixed(2);   
   }
 
-  calcMarsYears(age) {
+  calcMarsYears() {
     const marsYears = (this.age * 365) / (365 * 1.88);
     return marsYears.toFixed(2);   
   }
 
-  calcJupYears(age) {
+  calcJupYears() {
     const jupYears = (this.age * 365) / (365 * 11.86);
     return jupYears.toFixed(2);   
   }
 
-  setActivityLevel(level){ 
-    if ( level === "Not Active"){
-      this.activityLevel = "Not Active"
+  setActivityLevel(level) { 
+    if (level === "Not Active") {
+      this.activityLevel = "Not Active";
     }
-    if ( level === "Very Active"){
-      this.activityLevel = "Very Active" 
+    if (level === "Very Active") {
+      this.activityLevel = "Very Active"; 
     }
   }
 
-  calcLifeExp(activitylevel) {
-    if (activitylevel === "Not Active"){
-      return this.lifeExp += 50;
+  setLifeExp(activitylevel) {
+    if (activitylevel === "Not Active") {
+      this.lifeExp += 50;
     } 
     if (activitylevel === "Very Active") {
-      return this.lifeExp += 80;
+      this.lifeExp += 80;
     }
   }
 
-  calcLifeLeft(){
+  // calcLifeLeftOnPlanet(planetName = "Earth") {
+  //   if (planetName === "Mercury") {
+  //     return this.calcLifeLeftOnMercury();
+  //   }
+  //   // if (planetName === "Venus") {
+  //   //   return this.calcLifeLeftOnVenus();
+  //   // }
+  //   // if (planetName === "Earth") {
+  //   //   return this.calcLifeLeftOnEarth();
+  //   // }
+  //   // if (planetName === "Jupiter") {
+  //   //   return this.calcLifeLeftOnJupiter();
+  //   // }
+  // }
+  
+  calcLifeLeft() { //earth
     const lifeLeft = parseFloat(this.lifeExp) - parseFloat(this.age); 
     return parseFloat(lifeLeft.toFixed(2));
   }
-//   calcLifeLeftPerPlanet () {
-//       const lifeleftonPlanetBlank = (this.lifeExp * 365) / (365 * 0.24) - (parseFloat(this.calcMercYears()));  
-//       return lifeleftonPlanetBlank;
-//   }
 
+  calcLifeLeftOnMercury() {
+    const mercAge = this.calcMercYears(this.age);
+    const mercLifeExp = this.calcMercYears(this.lifeExp);
+
+    return mercLifeExp - mercAge;
+  }
 }

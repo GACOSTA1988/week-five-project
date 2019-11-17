@@ -2,7 +2,8 @@ import { Person } from "./../src/galactic-age-calculator.js";
 
 test('should correctly convert 5 earth years to (20.83) mercury years', () => {
   let testMercPerson = new Person(5);
-  expect(testMercPerson.calcMercYears()).toEqual("20.83");
+  let mercAge = testMercPerson.age;
+  expect(testMercPerson.calcMercYears(mercAge)).toEqual("20.83");
 });
 
 test('should correctly convert 5 earth years to (8.06) venus years', () => {
@@ -14,30 +15,30 @@ test('should correctly convert 5 earth years to (2.66) Mars years', () => {
   let testMarsPerson = new Person(5);
   expect(testMarsPerson.calcMarsYears()).toEqual("2.66");
 });
+
 test('should correctly convert 5 earth years to (0.42) Jupiter years', () => {
   let testJupPerson = new Person(5);
   expect(testJupPerson.calcJupYears()).toEqual("0.42");
 });
+
 test('should correctly set the activity level for person object', () => {
-  let testSetActLev = new Person();
+  let testSetActLev = new Person(5);
   testSetActLev.setActivityLevel("Very Active")
   expect(testSetActLev.activityLevel).toEqual("Very Active");
 });
-test('should correctly set lifeExp in regards to activity level ', () => {
-  let testSetActLev = new Person();
-  testSetActLev.calcLifeExp("Very Active")
+
+test('should correctly set lifeExp in regards to activity level', () => {
+  let testSetActLev = new Person(5);
+  testSetActLev.setLifeExp("Very Active");
   expect(testSetActLev.lifeExp).toEqual(80);
 });
+
 test('should correctly calculate life left in regards to current age and lifeExp ', () => {
-  let testSetActLev = new Person("20");
-  testSetActLev.calcLifeExp("Very Active")
+  let testSetActLev = new Person(20, "Very Active", 80);
   expect(testSetActLev.calcLifeLeft()).toEqual(60);
 });
 
-// test('should correctly calculate life left in regards to current age and lifeExp on Mercury ', () => {
-//   let testSetActLev = new Person();
-//   // testSetActLev.calcMercYears(5)
-//   testSetActLev.calcLifeExp("Very Active");
-//   testSetActLev.calcMercYears()
-//   expect(testSetActLev.calcLifeLeftPerPlanet()).toEqual(60);
-// });
+test('should correctly calculate life in Mercury years left in regards to current age and lifeExp on Mercury', () => {
+  let testSetActLev = new Person(20, "Very Active", 80);
+  expect(testSetActLev.calcLifeLeftOnMercury()).toEqual(250);
+});
