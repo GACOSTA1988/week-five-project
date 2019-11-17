@@ -42,3 +42,16 @@ test('should correctly calculate life in Mercury years left in regards to curren
   let testSetActLev = new Person(20, "Very Active", 80);
   expect(testSetActLev.calcLifeLeftOnMercury()).toEqual(250);
 });
+
+test('should correctly calculate life in Venus years left in regards to current age and lifeExp on Mercury', () => {
+  let testSetActLev = new Person(20, "Very Active", 80);
+  expect(testSetActLev.calcLifeLeftOnVenus()).toEqual(250);
+});
+test('should correctly calculate life in Mars years left in regards to current age and lifeExp on Mercury', () => {
+  let testSetActLev = new Person(20, "Very Active", 80);
+  expect(testSetActLev.calcLifeLeftOnMars()).toEqual(250);
+});
+test('should correctly calculate life in Jupiter years left in regards to current age and lifeExp on Mercury', () => {
+  let testSetActLev = new Person(20, "Very Active", 80);
+  expect(testSetActLev.calcLifeLeftOnJupiter()).toEqual(250);
+});

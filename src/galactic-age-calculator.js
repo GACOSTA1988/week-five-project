@@ -69,4 +69,22 @@ export class Person {
 
     return mercLifeExp - mercAge;
   }
+  calcLifeLeftOnVenus() {
+    const venusAge = this.calcVenYears(this.age);
+    const venusLifeExp = this.calcVenYears(this.lifeExp);
+
+    return venusLifeExp - venusAge;
+  }
+  calcLifeLeftOnMars() {
+    const marsAge = this.calcMarsYears(this.age);
+    const marsLifeExp = this.calcMarsYears(this.lifeExp);
+
+    return marsLifeExp - marsAge;
+  }
+  calcLifeLeftOnJupiter() {
+    const jupiterAge = this.calcJupYears(this.age);
+    const jupiterLifeExp = this.calcJupYears(this.lifeExp);
+
+    return jupiterLifeExp - jupiterAge;
+  }
 }
