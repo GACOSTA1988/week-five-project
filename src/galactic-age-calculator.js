@@ -1,30 +1,38 @@
 export class Person {
-  constructor(age = 0, activityLevel = "", lifeExp = 0) {
+
+  // MAIN CONSTRUCTOR
+  constructor(age = 21, activityLevel = "", lifeExp = 0) {
     this.age = age, 
     this.activityLevel = activityLevel,
     this.lifeExp = lifeExp;
   }
 
+ 
+  // EARTH TO MERCURY YEAR CONVERSION
   calcMercYears(years) {
     const mercYears = (years * 365) / (365 * 0.24);
     return mercYears.toFixed(2);   
   }
 
-  calcVenYears() {
-    const venYears = (this.age * 365) / (365 * 0.62);
+  // EARTH TO VENUS YEAR CONVERSION
+  calcVenYears(years) {
+    const venYears = (years * 365) / (365 * 0.62);
     return venYears.toFixed(2);   
   }
 
-  calcMarsYears() {
-    const marsYears = (this.age * 365) / (365 * 1.88);
+  // EARTH TO MARS YEAR CONVERSION
+  calcMarsYears(years) {
+    const marsYears = (years * 365) / (365 * 1.88);
     return marsYears.toFixed(2);   
   }
 
-  calcJupYears() {
-    const jupYears = (this.age * 365) / (365 * 11.86);
+  // EARTH TO JUPITER YEAR CONVERSION
+  calcJupYears(years) {
+    const jupYears = (years * 365) / (365 * 11.86);
     return jupYears.toFixed(2);   
   }
 
+  // THIS WILL SET ACTIVITY LEVEL TO OBJECT
   setActivityLevel(level) { 
     if (level === "Not Active") {
       this.activityLevel = "Not Active";
@@ -34,6 +42,7 @@ export class Person {
     }
   }
 
+  // THIS WILL SET LIFE EXP TO OBJECT IN REGARDS TO ACTIVITY LEVEL 
   setLifeExp(activitylevel) {
     if (activitylevel === "Not Active") {
       this.lifeExp += 50;
@@ -58,33 +67,42 @@ export class Person {
   //   // }
   // }
   
-  calcLifeLeft() { //earth
+
+  // THIS WILL CALCULATE LIFE LEFT FROM CURRENT AGE TO LIFE EXP(EARTH)
+  calcLifeLeft() { 
     const lifeLeft = parseFloat(this.lifeExp) - parseFloat(this.age); 
     return parseFloat(lifeLeft.toFixed(2));
   }
 
+ // THIS WILL CALCULATE LIFE LEFT FROM CURRENT AGE TO LIFE EXP(MERCURY)
   calcLifeLeftOnMercury() {
     const mercAge = this.calcMercYears(this.age);
     const mercLifeExp = this.calcMercYears(this.lifeExp);
 
-    return mercLifeExp - mercAge;
+    return parseFloat(mercLifeExp - mercAge).toFixed(2);
   }
+
+  // THIS WILL CALCULATE LIFE LEFT FROM CURRENT AGE TO LIFE EXP(VENUS)
   calcLifeLeftOnVenus() {
     const venusAge = this.calcVenYears(this.age);
     const venusLifeExp = this.calcVenYears(this.lifeExp);
 
-    return venusLifeExp - venusAge;
+    return parseFloat(venusLifeExp - venusAge).toFixed(2);
   }
+  
+  // THIS WILL CALCULATE LIFE LEFT FROM CURRENT AGE TO LIFE EXP(MARS)
   calcLifeLeftOnMars() {
     const marsAge = this.calcMarsYears(this.age);
     const marsLifeExp = this.calcMarsYears(this.lifeExp);
 
-    return marsLifeExp - marsAge;
+    return parseFloat(marsLifeExp - marsAge).toFixed(2);
   }
+  
+  // THIS WILL CALCULATE LIFE LEFT FROM CURRENT AGE TO LIFE EXP(JUPITER)
   calcLifeLeftOnJupiter() {
     const jupiterAge = this.calcJupYears(this.age);
     const jupiterLifeExp = this.calcJupYears(this.lifeExp);
 
-    return jupiterLifeExp - jupiterAge;
+    return parseFloat(jupiterLifeExp - jupiterAge).toFixed(2);
   }
 }

@@ -67,7 +67,7 @@
 * EX INPUT: Very Active 
 * EX OUTPUT: 80
 
-8. should correctly calculate life left in regards to   current age and lifeExp 
+8. should correctly calculate life left in regards to current age and lifeExp. 
 * FAIL
 * EX INPUT: This.age 20, LifeExp 50
 * EX OUTPUT: 40
@@ -76,14 +76,41 @@
 * EX INPUT: This.age 20, LifeExp 80
 * EX OUTPUT: 60
 
-9. should correctly calculate life left in regards to current age and lifeExp on Mercury
+9. should correctly calculate life left in regards to current age and lifeExp on Mercury.
 * FAIL
-* EX INPUT:  
-* EX OUTPUT: 
+* EX INPUT:  20, 80
+* EX OUTPUT: 120
 
 * PASS
-* EX INPUT: 
-* EX OUTPUT: 
+* EX INPUT: 20, 80
+* EX OUTPUT: 250.00
+
+10. should correctly calculate life left in regards to current age and lifeExp on venus.
+* FAIL
+* EX INPUT:  20, 80
+* EX OUTPUT: 20
+
+* PASS
+* EX INPUT: 20, 80
+* EX OUTPUT: 96.77
+
+11. should correctly calculate life left in regards to current age and lifeExp on Mars.
+* FAIL
+* EX INPUT:  20, 80
+* EX OUTPUT: 20
+
+* PASS
+* EX INPUT: 20, 80
+* EX OUTPUT: 31.91
+
+12. should correctly calculate life left in regards to current age and lifeExp on Jupiter.
+* FAIL
+* EX INPUT:  20, 80
+* EX OUTPUT: 30
+
+* PASS
+* EX INPUT: 20, 80
+* EX OUTPUT: 5.06
 
 ## Setup/Installation Requirements
 
