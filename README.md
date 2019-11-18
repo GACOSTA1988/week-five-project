@@ -112,6 +112,42 @@
 * EX INPUT: 20, 80
 * EX OUTPUT: 5.06
 
+13. JUPITER: If person has outlived lifeExp, should correctly calculate number of years lived past life exp'
+* FAIL
+* EX INPUT:  100, 80
+* EX OUTPUT: 55
+
+* PASS
+* EX INPUT: 100, 80
+* EX OUTPUT: 1.68
+
+14. MARS: If person has outlived lifeExp, should correctly calculate number of years lived past life exp'
+* FAIL
+* EX INPUT:  100, 80
+* EX OUTPUT: 20
+
+* PASS
+* EX INPUT: 100, 80
+* EX OUTPUT: 10.64
+
+15. VENUS: If person has outlived lifeExp, should correctly calculate number of years lived past life exp'
+* FAIL
+* EX INPUT:  100, 80
+* EX OUTPUT: 320
+
+* PASS
+* EX INPUT: 100, 80
+* EX OUTPUT: 32.26
+
+16. MERCURY: If person has outlived lifeExp, should correctly calculate number of years lived past life exp.
+* FAIL
+* EX INPUT:  100, 80
+* EX OUTPUT: 30
+
+* PASS
+* EX INPUT: 100, 80
+* EX OUTPUT: 83.34
+
 ## Setup/Installation Requirements
 
 * Clone portfolio this repository

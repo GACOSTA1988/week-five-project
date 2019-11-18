@@ -7,7 +7,6 @@ export class Person {
     this.lifeExp = lifeExp;
   }
 
- 
   // EARTH TO MERCURY YEAR CONVERSION
   calcMercYears(years) {
     const mercYears = (years * 365) / (365 * 0.24);
@@ -37,6 +36,7 @@ export class Person {
     if (level === "Not Active") {
       this.activityLevel = "Not Active";
     }
+
     if (level === "Very Active") {
       this.activityLevel = "Very Active"; 
     }
@@ -47,26 +47,11 @@ export class Person {
     if (activitylevel === "Not Active") {
       this.lifeExp += 50;
     } 
+
     if (activitylevel === "Very Active") {
       this.lifeExp += 80;
     }
   }
-
-  // calcLifeLeftOnPlanet(planetName = "Earth") {
-  //   if (planetName === "Mercury") {
-  //     return this.calcLifeLeftOnMercury();
-  //   }
-  //   // if (planetName === "Venus") {
-  //   //   return this.calcLifeLeftOnVenus();
-  //   // }
-  //   // if (planetName === "Earth") {
-  //   //   return this.calcLifeLeftOnEarth();
-  //   // }
-  //   // if (planetName === "Jupiter") {
-  //   //   return this.calcLifeLeftOnJupiter();
-  //   // }
-  // }
-  
 
   // THIS WILL CALCULATE LIFE LEFT FROM CURRENT AGE TO LIFE EXP(EARTH)
   calcLifeLeft() { 
@@ -74,35 +59,46 @@ export class Person {
     return parseFloat(lifeLeft.toFixed(2));
   }
 
- // THIS WILL CALCULATE LIFE LEFT FROM CURRENT AGE TO LIFE EXP(MERCURY)
+  // THIS WILL CALCULATE LIFE LEFT FROM CURRENT AGE TO LIFE EXP(MERCURY)
   calcLifeLeftOnMercury() {
     const mercAge = this.calcMercYears(this.age);
     const mercLifeExp = this.calcMercYears(this.lifeExp);
+    const difference = Math.abs(mercAge - mercLifeExp)
 
-    return parseFloat(mercLifeExp - mercAge).toFixed(2);
+    return parseFloat(difference).toFixed(2);
   }
 
-  // THIS WILL CALCULATE LIFE LEFT FROM CURRENT AGE TO LIFE EXP(VENUS)
+  // THIS WILL CALCULATE LIFE LEFT FROM CURRENT AGE TO LIFE EXP(VENUS) 
+  // & WILL RETURN YEARS LIVED PASSED LIFE EXP IG AGE > LIFE EXP.
   calcLifeLeftOnVenus() {
     const venusAge = this.calcVenYears(this.age);
     const venusLifeExp = this.calcVenYears(this.lifeExp);
+    const difference = Math.abs(venusAge - venusLifeExp);
 
-    return parseFloat(venusLifeExp - venusAge).toFixed(2);
+    return parseFloat(difference).toFixed(2);
   }
   
   // THIS WILL CALCULATE LIFE LEFT FROM CURRENT AGE TO LIFE EXP(MARS)
+  // & WILL RETURN YEARS LIVED PASSED LIFE EXP IG AGE > LIFE EXP.
   calcLifeLeftOnMars() {
     const marsAge = this.calcMarsYears(this.age);
     const marsLifeExp = this.calcMarsYears(this.lifeExp);
+    const difference = Math.abs(marsAge - marsLifeExp);
 
-    return parseFloat(marsLifeExp - marsAge).toFixed(2);
+    return parseFloat(difference).toFixed(2);
+
   }
   
   // THIS WILL CALCULATE LIFE LEFT FROM CURRENT AGE TO LIFE EXP(JUPITER)
+  // & WILL RETURN YEARS LIVED PASSED LIFE EXP IG AGE > LIFE EXP.
   calcLifeLeftOnJupiter() {
     const jupiterAge = this.calcJupYears(this.age);
     const jupiterLifeExp = this.calcJupYears(this.lifeExp);
+    
+    const difference = Math.abs(jupiterAge - jupiterLifeExp)
 
-    return parseFloat(jupiterLifeExp - jupiterAge).toFixed(2);
+
+    return parseFloat(difference).toFixed(2);
   }
+
 }

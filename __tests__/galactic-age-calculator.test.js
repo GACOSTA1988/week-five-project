@@ -12,7 +12,7 @@ test('should correctly convert 5 earth years to (8.06) venus years', () => {
   let testVenPerson = new Person(5);
   let venAge = testVenPerson.age;
   expect(testVenPerson.calcVenYears(venAge)).toEqual("8.06");
-}); 
+});
 
 // THIS WILL TEST EARTH TO MARS CONVERSION
 test('should correctly convert 5 earth years to (2.66) Mars years', () => {
@@ -55,21 +55,43 @@ test('should correctly calculate life in Mercury years left in regards to curren
 });
 
 // THIS WILL TEST FUNCTION THAT SUBTRACTS CURRENT AGE - LIFEEXP OF OBJECT(VENUS)
-test('should correctly calculate life in Venus years left in regards to current age and lifeExp on Mercury', () => {
+test('should correctly calculate life in Venus years left in regards to current age and lifeExp on Venus', () => {
   let testSetActLev = new Person(20, "Very Active", 80);
   expect(testSetActLev.calcLifeLeftOnVenus()).toEqual("96.77");
 });
 
 // THIS WILL TEST FUNCTION THAT SUBTRACTS CURRENT AGE - LIFEEXP OF OBJECT(MARS)
-test('should correctly calculate life in Venus years left in regards to current age and lifeExp on Mercury', () => {
+test('should correctly calculate life in Mars years left in regards to current age and lifeExp on Mars', () => {
   let testSetActLev = new Person(20, "Very Active", 80);
   expect(testSetActLev.calcLifeLeftOnMars()).toEqual("31.91");
 });
 
-
-
 // THIS WILL TEST FUNCTION THAT SUBTRACTS CURRENT AGE - LIFEEXP OF OBJECT(JUPITER)
-test('should correctly calculate life in Jupiter years left in regards to current age and lifeExp on Mercury', () => {
+test('should correctly calculate life in Jupiter years left in regards to current age and lifeExp on Jupiter', () => {
   let testSetActLev = new Person(20, "Very Active", 80);
   expect(testSetActLev.calcLifeLeftOnJupiter()).toEqual("5.06");
+});
+
+// TEST AGE > LIFE EXP JUP
+test('JUPITER: If person has outlived lifeExp, should correctly calculate number of years lived past life exp', () => {
+  let testSetActLev = new Person(100, "Very Active", 80);
+  expect(testSetActLev.calcLifeLeftOnJupiter()).toEqual("1.68");
+});
+
+// TEST AGE > LIFE EXP MARS
+test('MARS: If person has outlived lifeExp, should correctly calculate number of years lived past life exp', () => {
+  let testSetActLev = new Person(100, "Very Active", 80);
+  expect(testSetActLev.calcLifeLeftOnMars()).toEqual("10.64");
+});
+
+// TEST AGE > LIFE EXP VENUS
+test('VENUS: If person has outlived lifeExp, should correctly calculate number of years lived past life exp', () => {
+  let testSetActLev = new Person(100, "Very Active", 80);
+  expect(testSetActLev.calcLifeLeftOnVenus()).toEqual("32.26");
+});
+
+// TEST AGE > LIFE EXP MERCURY
+test('MERCURY: If person has outlived lifeExp, should correctly calculate number of years lived past life exp', () => {
+  let testSetActLev = new Person(100, "Very Active", 80);
+  expect(testSetActLev.calcLifeLeftOnMercury()).toEqual("83.34");
 });
